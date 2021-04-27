@@ -5,30 +5,32 @@
 </ion-header>
 
 <ion-content padding>
-  <h1>Body Mass Index Calculator</h1>
+  <h1>Markdown Calculator</h1>
   <p>
-    There's no "perfect weight" that fits everyone. BMI, or body mass index, 
-measures how healthy your weight is based on how tall you are. It gives you a 
-clue to yur risk for weight-related health problems. 
+    Markdown is a reduction of the product price, basing on the inability to sell it at the
+initial price or original selling price. In other words, markdown is the difference between
+the original retail price and the actual selling price. 
   </p>
-  <p>
-   Source: https://www.webmd.com
-  </p>
+  
   <br />
 
   <ion-item>
-    <ion-label>Height in Meter:</ion-label>
-    <ion-input type="number" [(ngModel)]= "height"></ion-input>
+    <ion-label> Original Selling Price:</ion-label>
+    <ion-input type="number" [(ngModel)]= "original"></ion-input>
   </ion-item>
 <ion-item>
-  <ion-label> Weight in Kilogram: </ion-label>
-  <ion-input type="number" [(ngModel)]="weight"></ion-input>
+  <ion-label> Actual Selling Price: </ion-label>
+  <ion-input type="number" [(ngModel)]="actual"></ion-input>
 </ion-item>
 
 <button ion-button color="secondary" (click)= "calculateBMI()">
   Calculate
 </button>
 
-<ion-item *ngIf="bmi">
-  <h2> Your BMI is: {{bmi}} <code> ({{bmiMessage}}) </code></h2>
+<ion-item *ngIf="markdown">
+  <h2> Markdown: {{markdown}} <code>  </code></h2>
+</ion-item>
+
+<ion-item *ngIf="rate">
+  <h2> Rate: {{rate}} <code>  </code></h2>
 </ion-item>
