@@ -5,9 +5,12 @@ ion-content {
 h1{
   color: aliceblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
   text-align: justify;
   
 }
+
+
 
 p {
   color: aliceblue;
